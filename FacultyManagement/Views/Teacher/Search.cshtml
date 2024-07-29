@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SchoolManagementSystem.Models.Teacher>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Search</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-nl1fZKxVYABYTC5v6wtMSeGCcVqb2JiMi4n/w3j+yo0+Mjv33eZtEulIYevY4b3l" crossorigin="anonymous">
+    <style>
+        /* Optional: Add custom styles here */
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Search Results</h1>
+        <ul class="list-group mt-3">
+            @foreach (var teacher in Model)
+            {
+                <li class="list-group-item">
+                    <a href="@Url.Action("Show", "Teacher", new { id = teacher.TeacherId })">@teacher.Name</a>
+                </li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

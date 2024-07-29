@@ -1,0 +1,20 @@
+﻿@model SchoolManagementSystem.Models.Student
+
+<h2>Edit</h2>
+<form asp-action="Edit">
+    <input type="hidden" asp-for="StudentId" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EnrollmentDate" class="control-label">Enrollment Date</label>
+        <input asp-for="EnrollmentDate" class="form-control" />
+        <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
+    </div>
+    <div class="form-group mt-2">
+       <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </div>
+</form>

@@ -1,0 +1,9 @@
+﻿@model SchoolManagementSystem.Models.Teacher
+
+<h2>@Model.Name</h2>
+<p>Hire Date: @Model.HireDate.ToShortDateString()</p>
+<p>Salary: @Model.Salary.ToString("C")</p>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.TeacherId" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</p>

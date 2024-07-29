@@ -1,0 +1,8 @@
+﻿@model SchoolManagementSystem.Models.Class
+
+<h2>@Model.ClassName</h2>
+<p>Teacher ID: @Model.TeacherId</p>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.ClassId" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</p>
